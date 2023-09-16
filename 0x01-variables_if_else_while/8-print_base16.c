@@ -20,7 +20,7 @@ int main(void)
 		}
 	while
 		(c < 'f') {
-		       putchar(c <= 'f');
+		       putchar(c);
 		       c++;
 		}
 	putchar('\n');

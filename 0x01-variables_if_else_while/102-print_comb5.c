@@ -6,32 +6,26 @@
 
 int main(void)
 {
-	int a;
-	int b;
-	int c;
-	int z = 0;
+	int n1, n2;
 
-	for (a = '0'; a <= '7'; a++)
+	for (n1 = 0; n1 <= 99; n1++)
 	{
-		for (b = '0'; b <= '8'; b++)
+		for (n2 = 0; n2 <= 99; n2++)
 		{
-			for (c = '0'; c <= '9'; c++)
+			if (n1 < n2 && n1 != n2)
 			{
-				if (a < b && b <= c && a != b && b != c)
+				putchar((n1 / 10) + '0');
+				putchar((n1 % 10) + '0');
+				putchar(' ');
+				putchar((n2 / 10) + '0');
+				putchar((n2 % 10) + '0');
+				if (n1 != 98 || n2 != 99)
 				{
-					putchar(a);
-					putchar(b);
-					putchar(c);
-					z++;
-					if (z < 126)
-					{
-						putchar (',');
-						putchar (' ');
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
-		z++;
 	}
 	putchar('\n');
 	return (0);

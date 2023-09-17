@@ -14,6 +14,10 @@ int main(void)
 		for (ones = '0'; ones <= '9'; ones++)
 			if (!((ones == tens) || (tens > ones)))
 			{
+				putchar('\n');
+			}
+			else
+			{
 				putchar(tens);
 				putchar(ones);
 				if (!(ones == '8' && tens == '9'))
@@ -23,6 +27,5 @@ int main(void)
 				}
 			}
 	}
-	putchar('\n');
 	return (0);
 }

@@ -2,11 +2,10 @@
 #include <stdio.h>
 
 /*
- * print_to_98 - Prints natural number from n to 98.
- * @n: number to starting number.
- *
- * Description: This function takes an integer n as its parameter and prints all natural numbers from n to 98.
- * Return: does not return a value (void).
+ * print_to_98 - Print n times table starting with 0
+ * Description: This function takes that prints all natural numbers from n to 98
+ * @n: starting number
+ * Return: does not return (value).
  */
 void print_to_98(int n)
 {

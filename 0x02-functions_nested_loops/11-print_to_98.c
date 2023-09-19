@@ -3,10 +3,11 @@
 
 /*
  * print_to_98 - Prints natural number from n to 98.
- * @n: numnber to starting number
- * Return: void
+ * @n: number to starting number.
+ *
+ * Description: This function takes an integer n as its parameter and prints all natural numbers from n to 98.
+ * Return: does not return a value (void).
  */
-
 void print_to_98(int n)
 {
 	int i;

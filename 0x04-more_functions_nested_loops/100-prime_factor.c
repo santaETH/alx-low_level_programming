@@ -1,9 +1,11 @@
 #include <stdio.h>
+
 /**
  * main - function finds & prints the largest prime factor of a number
  *
  * Return: 0 the largest prime factor of n
  */
+
 int main(void)
 {
 	long primme = 612852475143, divisor;

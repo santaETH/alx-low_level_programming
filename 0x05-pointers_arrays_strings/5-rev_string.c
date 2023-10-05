@@ -6,20 +6,23 @@
  * @s: input string
  * Return: Always 0
  */
+
 void rev_string(char *s)
 {
-	int counter = 0;
-	int i;
+	int a, b;
+	int let;
 
-	while (s[counter] != '\0')
-	counter++;
-	for (i = 0; i < counter; i++)
+	for (a = 0; s[a] != 0; a++)
 	{
-		counter--;
-		rev = s[i];
-		s[i] = s[counter];
-		s[counter] = rev;
 	}
-
-
-
+	b = 0;
+	a = a - 1;
+	while (b < a)
+	{
+		let = s[a];
+		s[a] = s[b];
+		s[b] = let;
+		b++;
+		a--;
+	}
+}

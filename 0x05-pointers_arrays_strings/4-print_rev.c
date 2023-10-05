@@ -5,22 +5,18 @@
  * @s: string
  * Return: Always 0.
  */
-void print_rev(char *s)
+void print_rev(char *str)
 {
-	int longi = 0;
-	int o;
+	int a;
+	int let;
 
-	while (*s != '\0')
+	for (a = 0; str[a] != 0; a++)
 	{
-		longi++;
-		s++;
 	}
-	s--;
-	for (o = longi; o > 0; o++)
+	for  (a = a - 1; a >= 0; a--)
 	{
-		_putchar(*s);
-		s--;
+		let = str[a];
+		_putchar(let);
 	}
 	_putchar('\n');
 }
-

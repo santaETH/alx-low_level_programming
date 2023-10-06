@@ -1,27 +1,48 @@
 #include <stdlib.h>
 #include "main.h"
 
+void mywstr(char **, char *);
+void cmyword(char **, char *, int, int, int);
+
 /**
- * cmyword - creates a word from a string.
- * @words: the words to insert to string.
+ * strtow - a function that split a string to words.
  * @str: the string to work on it.
- * @start: the start position.
- * @end: the stop position.
- * @index: where to start inserting the new word.
- * Return: nothing.
+ * Return: a pointer of the splited words.
  */
 
-void cmyword(char **words, char *str, int start, int end, int index)
+char **strtow(char *str)
 {
-	int i, j;
+	int i, wxwrflag, wlen;
+	char **words;
 
-	i = end - start;
-	words[index] = (char *)malloc(sizeof(char) * (i + 1));
-
-	for (j = 0; start < end; start++, j++)
+	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
 	{
-		words[index][j] = str[start];
+		return (NULL);
 	}
 
-	words[index][j] = '\0';
+
+	i = wxwrflag = wlen = 0;
+
+	while (str[i])
+
+	{
+		if (wxwrflag == 0 && str[i] != ' ')
+			wxwrflag = 1;
+
+		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
+
+		{
+			wxwrflag = 0;
+			wlen++;
+		}
+
+		i++;
+	}
+
+	wlen += wxwrflag == 1 ? 1 : 0;
+
+	if (wlen == 0)
+	{
+		return (NULL);
+	}
 }

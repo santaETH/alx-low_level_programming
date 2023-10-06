@@ -45,4 +45,8 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
+
+	mywstr(words, str);
+	words[wlen] = NULL;
+	return (words);
 }

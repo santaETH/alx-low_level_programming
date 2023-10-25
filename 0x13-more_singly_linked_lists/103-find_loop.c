@@ -4,16 +4,17 @@
  * find_listint_loop - find the loop in the linked list.
  * @head: pointer to the beginning of the list.
  *
- * Return: address of the node where the loop starts or NULL if there is no loop.
+ * Return: address of the node where the loop starts or NULL
  */
 listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *tortoise, *hare;
 
 	tortoise = hare = head;
-        while (tortoise && hare && hare->next)
-        {
-                tortoise = tortoise->next;
+
+	while (tortoise && hare && hare->next)
+	{
+		tortoise = tortoise->next;
 		hare = hare->next->next;
 		if (tortoise == hare)
 		{

@@ -3,12 +3,10 @@
 #include <stdio.h>
 
 /**
- * _ra - reallocate memory for the array of pointer
- * @list: to the old list to append
- * @size: size of the new list always more than old list.
- * @new: new node to add to the list
+ * free_listp2 - frees a linked list.
+ * @head: head of a list
  *
- * Return; pointer to the new list
+ * Return: no return
  */
 listint_t **_ra(listint_t **list, size_t size, listint_t *new)
 {

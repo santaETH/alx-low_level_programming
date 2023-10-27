@@ -31,6 +31,7 @@ void print_binary(unsigned long int n)
 
 	flag = 0;
 	divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
+
 	while (divisor != 0)
 	{
 		check = n & divisor;
